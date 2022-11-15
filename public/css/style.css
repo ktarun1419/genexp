@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    --main-color: #000000;
+    --primry-color: #827C7C;
+    --button-background: #F1C40F;
+    --primary-button-background: #F1C40F;
+    --background-color: #FFFFFF;
+}
+
+h1,
+h2 {
+    color: var(--main-color);
+}
+
+h4,
+h3 {
+    color: var(--main-color);
+}
+
+h3 {
+    font-weight: 750;
+    font-size: 2.2rem;
+    line-height: 6rem;
+    text-transform: capitalize;
+}
+
+p,
+a,
+li,
+button {
+    color: var(--primry-color);
+}
+
+p {
+    font-size: 1.8rem;
+    line-height: 150%;
+    font-style: normal;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    line-height: 3.6rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2rem;
+}

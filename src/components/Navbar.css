@@ -1,0 +1,91 @@
+.menu {
+    padding: 0 14rem;
+    /* margin-top: 12rem; */
+}
+
+.menu nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 12rem;
+    /* position: fixed;
+    top: 0;  */
+}
+
+
+.menu nav .left-side-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+
+}
+
+.menu nav .left-side-menu .sub-menu {
+    height: inherit;
+    display: flex;
+    /* position: relative;
+    z-index: 99; */
+}
+
+.menu nav .left-side-menu .sub-menu a {
+    margin-right: 2rem;
+}
+
+.menu nav .left-side-menu .logo a h3 {
+    font-size: 2.5rem;
+}
+
+.menu nav .left-side-menu .sub-menu a li {
+    font-size: 2rem;
+    line-height: 3.6rem;
+    text-transform: capitalize;
+    transition: all 0.2s;
+}
+
+.menu nav .left-side-menu .sub-menu a li:hover {
+    color: var(--button-background);
+}
+
+.menu .right-side-menu {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu .right-side-menu .sub-menu {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menu .right-side-menu .sub-menu a {
+    margin-right: 5rem;
+    padding: 0.7rem 2.5rem;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    position: relative;
+    z-index: 9;
+}
+
+
+.menu .right-side-menu .sub-menu button {
+    padding: 0.5rem 2.5rem;
+    background-color: var(--button-background);
+    color: #fff;
+    position: relative;
+    z-index: 9;
+}
+
+.menu .right-side-menu .sub-menu button:hover {
+    background: #1b3d68;
+}
+
+.menu .right-side-menu .sub-menu a li:hover {
+    color: var(--button-background);
+}

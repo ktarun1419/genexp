@@ -1,0 +1,20 @@
+.Box{
+    height: 500px;
+    display: flex;
+    background: rgba(241, 196, 15,0.12);
+}
+.Element1{
+    margin: 150px;
+    margin-right : 10px;
+    width: 40vw;
+}
+.Element{
+    margin: 70px;
+    margin-top: 150px;
+    width: 29vw;
+}
+.Element a{
+    font-weight: 600;
+    color: #f1c40f;
+    font-size: 175%;
+}

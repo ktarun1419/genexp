@@ -4,12 +4,23 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Security from './components/Security';
 
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  // Link
+} from "react-router-dom";
+
 function App() {
   return (
     <>
-    <Navbar/>
-    <Home/> 
-    <Security/>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/security" element={<Security />} />
+        </Routes>
+      </Router>
     </>
   );
 }

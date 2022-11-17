@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -13,18 +14,22 @@ export default function Navbar() {
                             </a>
                         </div>
                         <div className='sub-menu'>
-                            <a href="/">
+
+                            <NavLink to="/">
                                 <li>HOME</li>
-                            </a>
-                            <a href="/">
+                            </NavLink>
+
+                            <NavLink to="/">
                                 <li>ABOUT US</li>
-                            </a>
-                            <a href="/">
+                            </NavLink>
+                            
+                            <NavLink to="/security">
                                 <li>SECURITY</li>
-                            </a>
-                            <a href="/">
+                            </NavLink>
+
+                            <NavLink to="/">
                                 <li>CAREERS</li>
-                            </a>
+                            </NavLink>
                         </div>
                     </div>
 

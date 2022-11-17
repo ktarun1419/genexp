@@ -1,0 +1,36 @@
+.heading1{
+    text-align: center;
+    font-size: 3rem;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px;
+
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    background-color: #ECF0F1;
+    margin:20px;
+    height: 300px;
+    width: 574px;
+    border-radius: 30px;
+    flex-direction: column;
+    box-shadow: 10px 10px 50px rgb(0,0,0,0.25);
+}
+
+.box p{
+    font-size: 20px;
+    color:black;
+    margin-right: 45px;
+    margin-left: 45px;
+}
+
+.box h2{
+    font-size: 30px;
+    margin-top:30px;
+    margin-bottom: 20px;
+}

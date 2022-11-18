@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Footer from './components/Footer';
 import Security from './components/Security';
+import SignUp from './components/SignUp';
 
 
 import {
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/security" element={<Security />} />
+          <Route exact path="/signup" element={<SignUp />} />
         </Routes>
         <Footer/>
       </Router>

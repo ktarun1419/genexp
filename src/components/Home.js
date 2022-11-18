@@ -1,5 +1,6 @@
 import React from 'react'
 import './Home.css';
+import { Link } from "react-router-dom";
 
 export default function Home() {
     return (
@@ -11,7 +12,7 @@ export default function Home() {
                         Making Recruitment Experience Better
                     </p>
                     <div class="button-group">
-                        <button>Get Started</button>
+                        <Link to="/signup" ><button>Get Started</button></Link>
                     </div>
                 </div>
 

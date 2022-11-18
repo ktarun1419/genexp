@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import './Navbar.css';
 
 export default function Navbar() {
@@ -38,7 +39,7 @@ export default function Navbar() {
                             <a href="/">
                                 <li>Log In</li>
                             </a>
-                            <button>Sign Up</button>
+                            <Link to="/signup" className='style-btn'><button>Sign Up</button></Link>
                         </div>
                     </div>
                 </nav>

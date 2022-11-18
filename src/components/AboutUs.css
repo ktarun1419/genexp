@@ -1,11 +1,14 @@
 .abouttop{
+    
     height: 800px;
     width: 100%;
 }
 
 .about_main{
+    background-image: url("../../public/images/aboutBG.jpg");
+    background-size: cover;
     height: 800px;
-    background-color:rgb(241,196,15,0.12);
+
     padding: 0 14rem;
 }
 
@@ -31,11 +34,12 @@
 
 .about_text1_black{
     margin: 20px;
-    font-size: 20px;
+    font-size: 25px;
     color: black;
 }
 
 .about_text1_grey{
+    font-size: 23px;
     margin: 20px;
 }
 
@@ -67,7 +71,8 @@
 }
 
 .team_heading{
-    font-size: 30px;
+    color:#F1C40F;
+    font-size: 40px;
 }
 
 .team_container{
@@ -82,11 +87,17 @@
     height:240px;
     width:200px;
     text-align: center;
+    margin-top: 20px;
 }
 
 .team_member{
     height: 200px;
     width: 200px;
+}
+
+.team_card p{
+    color: black;
+    font-size: 25px;
 }
 
 

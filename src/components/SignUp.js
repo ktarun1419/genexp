@@ -4,8 +4,11 @@ import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import './SignUp.css';
+import { useEffect } from 'react';
 
-export default function SignUp() {
+export default function SignUp(props) {
+    props.funcNav(true);
+    useEffect(() => { document.title = "GenExp | Sign Up"; }, []);
   return (
     <>
     <div className="main-div">

@@ -1,7 +1,10 @@
 import React from 'react'
 import "./Security.css"
+import { useEffect } from 'react';
 
-export default function Security() {
+export default function Security(props) {
+    props.funcNav(true);
+    useEffect(() => { document.title = "GenExp | Security"; }, []);
   return (
     <>
     <h1 className='heading1'>SECURITY AT GENEXP</h1>

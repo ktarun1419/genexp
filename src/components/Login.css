@@ -1,0 +1,104 @@
+.main-login-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1000px;
+    width: 100%;
+    background-image: url("../../public/images/login.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -9;
+
+}
+
+.main-login-div .login-heading h1 {
+    margin-left: 784px;
+    padding: 4rem;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 72px;
+}
+
+.login-box {
+    margin-left: 784px;
+    width: 526px;
+    height: 639px;
+    padding: 50px;
+    background-color: #ECF0F1;
+    box-shadow: 8.84393px 8.84393px 44.2197px rgba(0, 0, 0, 0.25);
+    border-radius: 26.5318px;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-login-div .login-box button {
+    background-color: white;
+    width: 442px;
+    height: 50px;
+    border-radius: 40px;
+    text-align: center;
+    margin-top: 3rem;
+
+}
+
+.main-login-div .login-box p {
+    padding: 2rem;
+    margin-top: 1rem;
+    color: black;
+
+}
+
+.main-login-div .login-box a {
+    padding: 2rem;
+    margin-top: 0.5rem;
+    margin-left: 25rem;
+    color: black;
+    font-size: 1.8rem;
+
+}
+
+.main-login-div .login-box .inputBox input {
+    width: 442px;
+    height: 50px;
+    background: #FFFFFF;
+    border-radius: 40px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    line-height: 29px;
+    padding-left: 3rem;
+    margin: 10px;
+}
+
+.login-box input[type="submit"] {
+    width: 210px;
+    height: 56px;
+    background-color: #F1C40F;
+    border-radius: 30px;
+    border: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 36px;
+    cursor: pointer;
+    margin-top: 3rem;
+}
+
+.button-l-group button {
+    margin: 3.5rem 14rem;
+    padding: 0.5rem 2.5rem;
+    background-color: var(--button-background);
+    color: black;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 36px;
+    z-index: 1;
+    
+}

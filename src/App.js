@@ -4,7 +4,8 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import Security from './components/Security';
 import SignUp from './components/SignUp';
-
+import Login from './components/Login';
+import { useState } from 'react';
 
 import {
   BrowserRouter as Router,
@@ -14,18 +15,32 @@ import {
 } from "react-router-dom";
 
 function App() {
+  const [showNav, setShowNav] = useState(true);  
+
   return (
     <>
       <Router>
-        <Navbar />
+        {showNav &&
+          <nav>
+            <Navbar />
+          </nav>
+        }
+
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/security" element={<Security />} />
-          <Route exact path="/signup" element={<SignUp />} />
+          <Route exact path="/" element={<Home funcNav={setShowNav}/>} />
+          <Route exact path="/security" element={<Security funcNav={setShowNav}/>} />
+          <Route exact path="/signup" element={<SignUp funcNav={setShowNav}/>} />
+          <Route exact path="/login" element={<Login funcNav={setShowNav}/>} />
         </Routes>
-        <Footer/>
+
+        {showNav &&
+          <footer>
+            <Footer />
+          </footer> }
+
       </Router>
-    </>
+      </>
+    
   );
 }
 

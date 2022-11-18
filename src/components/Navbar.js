@@ -20,7 +20,7 @@ export default function Navbar() {
                                 <li>HOME</li>
                             </NavLink>
 
-                            <NavLink to="/">
+                            <NavLink to="/aboutus">
                                 <li>ABOUT US</li>
                             </NavLink>
                             

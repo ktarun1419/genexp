@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Security from './components/Security';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
+import AboutUs from './components/AboutUs';
 import { useState } from 'react';
 
 import {
@@ -31,6 +32,7 @@ function App() {
           <Route exact path="/security" element={<Security funcNav={setShowNav}/>} />
           <Route exact path="/signup" element={<SignUp funcNav={setShowNav}/>} />
           <Route exact path="/login" element={<Login funcNav={setShowNav}/>} />
+          <Route exact path="/aboutus" element={<AboutUs funcNav={setShowNav}/>} />
         </Routes>
 
         {showNav &&

@@ -71,7 +71,7 @@ export default function Home(props) {
                     <p>
                     We aim to provide common platform for all your internship/placement related work , expanding our database as we progress.<br/><br/>We designed our website in easy to use way with concern of personal data protection using blockchain technology. 
                     </p>
-                    <Link to={"/"}><button>KNOW MORE</button></Link>
+                    <Link to={"/aboutus"}><button>KNOW MORE</button></Link>
                 </div>
             </section>
         </>

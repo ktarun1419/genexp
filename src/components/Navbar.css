@@ -73,6 +73,10 @@
     z-index: 9;
 }
 
+.menu .right-side-menu .sub-menu .style-btn{
+    padding: 0px;
+}
+
 
 .menu .right-side-menu .sub-menu button {
     padding: 0.5rem 2.5rem;

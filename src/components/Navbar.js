@@ -36,9 +36,9 @@ export default function Navbar() {
 
                     <div className='right-side-menu'>
                         <div className="sub-menu">
-                            <a href="/">
+                            <Link to="/login">
                                 <li>Log In</li>
-                            </a>
+                            </Link>
                             <Link to="/signup" className='style-btn'><button>Sign Up</button></Link>
                         </div>
                     </div>

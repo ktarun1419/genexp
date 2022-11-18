@@ -1,0 +1,92 @@
+.abouttop{
+    height: 800px;
+    width: 100%;
+}
+
+.about_main{
+    height: 800px;
+    background-color:rgb(241,196,15,0.12);
+    padding: 0 14rem;
+}
+
+.about_heading{
+
+    font-size: 30px;
+    padding: 75px;
+    padding-left: 350px;
+    padding-bottom: 5px;
+}
+
+.text_container{
+    height: 500px;
+    display: flex;
+}
+.about_text1{
+    margin: 30px;
+    margin-left: 100px;
+    width: 1000px;
+    text-align: center;
+    justify-content:space-between;
+}
+
+.about_text1_black{
+    margin: 20px;
+    font-size: 20px;
+    color: black;
+}
+
+.about_text1_grey{
+    margin: 20px;
+}
+
+.about_text2{
+    text-align: center;
+    width: 600px;
+    align-self: flex-end;
+}
+
+.about_text2 p{
+    font-size: 20px;
+
+}
+
+
+.Company_name{
+
+    font-size: 35px;
+    padding-left: 150px;
+}
+
+.Company_name h2{
+    color:#F1C40F;
+}
+
+.aboutbottom{
+    margin-top: 80px;
+    text-align: center;
+}
+
+.team_heading{
+    font-size: 30px;
+}
+
+.team_container{
+    display: flex;
+    justify-content: space-around;
+    margin: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.team_card{
+    height:240px;
+    width:200px;
+    text-align: center;
+}
+
+.team_member{
+    height: 200px;
+    width: 200px;
+}
+
+

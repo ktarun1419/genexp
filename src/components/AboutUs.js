@@ -28,7 +28,7 @@ function AboutUs() {
     
   </section>
   <section className='aboutbottom'>
-    <h1 className='team_heading'>OUR TEAM</h1>
+    <h1 className='team_heading'><u>OUR TEAM</u></h1>
     <div className='team_container'>
       <div className='team_card'>
       <img className='team_member' src="images/avataar1.png" alt=""/>

@@ -132,3 +132,49 @@ color: #827C7C;
     line-height: 3rem;
     padding-bottom: 10px;
 }
+
+.about-home{
+    height: 500px;
+    display: flex;
+}
+
+.about-image{
+    height:450px;
+    margin-left: 180px;
+    padding-top: 50px;
+    
+}
+
+.about-content-container{
+    width: 100%;
+    margin: 60px;
+    padding-left: 100px;
+    padding-right: 30px;
+    text-align: center;
+}
+.about-content-container h1{
+    font-size: 25px;
+    text-align: center;
+    font-size: 40px;
+    color:#F1C40F;
+}
+.about-content-container p{
+    padding-top: 50px;
+    text-align: left;
+    font-size: 24px;
+}
+.about-content-container button{
+    background-color: var(--button-background);
+    color: #fff;
+    padding: 5px;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 30px;
+    
+   
+}
+
+.about-content-container button:hover {
+    background: #1b3d68;
+}

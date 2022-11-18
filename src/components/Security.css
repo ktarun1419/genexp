@@ -27,10 +27,12 @@
     color:black;
     margin-right: 45px;
     margin-left: 45px;
+    
 }
 
 .box h2{
     font-size: 30px;
     margin-top:30px;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }

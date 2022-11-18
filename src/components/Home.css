@@ -68,3 +68,58 @@
     border-radius: 0px 0px 300px 0px;
 
 }
+.feature_heading{
+    padding-top: 30px;
+    text-align: center;
+    font-size: 40px;
+    color:#F1C40F;
+}
+
+.feature_description{
+    font-size: 25px;
+    padding: 30px;
+text-align: center;
+color: #827C7C;
+}
+
+.Feature{
+    background-color: rgb(241,196,15,0.12);
+}
+
+.Card_container{
+    display: flex;
+    justify-content: space-around;
+
+}
+.card_up,.card_down{
+    width:300px;
+    height: 400px;
+    box-shadow:10px 10px 20px rgba(79,79,79,0.25);
+    border-radius: 30px;
+}
+
+.card_down{
+    margin-top: 150px;}
+
+
+.Grey_box{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 150px;
+    background-color: #ECF0F1;
+}
+
+.White_box{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+    height: 250px;
+    padding:20px;
+    background-color: white;
+}
+
+.White_box h3{
+
+    line-height: 3rem;
+    padding-bottom: 10px;
+}

@@ -34,7 +34,7 @@
 }
 
 
-.main-hero-section .button-group button {
+.main-hero-section .button-h-group button {
 
     padding: 0.5rem 2.5rem;
     background-color: var(--button-background);
@@ -44,7 +44,7 @@
     z-index: 9; */
 }
 
-.main-hero-section .button-group button:hover {
+.main-hero-section .button-h-group button:hover {
     background: #1b3d68;
 }
 
@@ -66,6 +66,9 @@
     width: 558px;
     height: 837px;
     border-radius: 0px 0px 300px 0px;
+    position: absolute;
+    top: 0px;
+    right: 0;
 
 }
 .feature_heading{
@@ -77,18 +80,20 @@
 
 .feature_description{
     font-size: 25px;
-    padding: 30px;
+    padding: 20px 14rem;
 text-align: center;
 color: #827C7C;
 }
 
 .Feature{
     background-color: rgb(241,196,15,0.12);
+    margin-top: 15rem;
 }
 
 .Card_container{
     display: flex;
     justify-content: space-around;
+    padding: 10px 14rem;
 
 }
 .card_up,.card_down{
@@ -106,7 +111,10 @@ color: #827C7C;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     height: 150px;
+    display: flex;
     background-color: #ECF0F1;
+    align-items: center;
+    justify-content: center;
 }
 
 .White_box{
@@ -116,10 +124,11 @@ color: #827C7C;
     height: 250px;
     padding:20px;
     background-color: white;
+    
 }
 
 .White_box h3{
-
+    text-transform: uppercase;
     line-height: 3rem;
     padding-bottom: 10px;
 }

@@ -62,6 +62,18 @@ export default function Home(props) {
                 </div>
 
             </section>
+            <section className='about-home'>
+                <div className='about-image-container'>
+                    <img className = 'about-image' src="images/aboutUs.jpg" alt="" />
+                </div>
+                <div className='about-content-container'>
+                    <h1><u>ABOUT GENEXP</u></h1>
+                    <p>
+                    We aim to provide common platform for all your internship/placement related work , expanding our database as we progress.<br/><br/>We designed our website in easy to use way with concern of personal data protection using blockchain technology. 
+                    </p>
+                    <Link to={"/"}><button>KNOW MORE</button></Link>
+                </div>
+            </section>
         </>
     )
 }

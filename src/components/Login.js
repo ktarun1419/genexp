@@ -33,7 +33,7 @@ export default function Login(props) {
                     </form>
                     <a href="/">Forgot password?</a>
                     <input type="submit" value="LOGIN" />
-                    <p>Create an Account</p>
+                    <p className='lastpara'>Create an Account</p>
                 </div>
             </div>
         </>

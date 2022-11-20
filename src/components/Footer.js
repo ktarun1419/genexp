@@ -8,7 +8,7 @@ function Footer() {
       <div className='Element1'>
           <h3>ABOUT GENEXP</h3>
           <p><b>Vision:</b> We aim to provide common platform for all your internship/placement related work.<br/><b>Product: </b>We designed our website in easy to use way with concern of personal data protection using blockchain technology.</p>
-          <div></div>
+          
       </div>
         
       <div className='Element'>

@@ -18,3 +18,79 @@
     color: #f1c40f;
     font-size: 175%;
 }
+
+@media (min-width: 1024px){
+    h3{
+        line-height: 3rem;
+    } 
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+    h3{
+        line-height: 3rem;
+    }
+
+    .Box{        
+        height: auto;        
+    }
+
+    .Element{
+        margin-right: 5px;
+        width: 29vw;        
+    }
+
+    
+}
+
+@media (max-width: 768px) {
+    .Box{
+        flex-direction: row;
+        height: auto;
+        align-items: top;
+        text-align: left;
+    }
+
+    .Element1{
+        margin: 40px;
+        padding-left: 30px;
+        margin-right : 5px;
+        width: 40vw;        
+    }
+
+    .Element{
+        margin: 40px;
+        width: 29vw;        
+    }
+
+    h3{
+        line-height: 3rem;
+    }
+    
+}
+
+@media (max-width: 558px){
+    .Box{
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        text-align: left;
+    }
+
+    .Element1{
+        margin: 50px;       
+        margin-left : 0px;
+        margin-right: 0px;
+        width: 40vw;
+    }
+
+    .Element{
+        margin: 10px;
+        margin-top: 10px;
+        width: 29vw;       
+    }
+
+    .Element1 p {
+        width: auto;
+        padding: 0px;
+    }
+}

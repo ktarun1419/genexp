@@ -6,6 +6,8 @@
     width: 100%;
     background-image: url("../../public/images/signup.jpg");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .main-div .signup-heading h1 {
@@ -71,4 +73,102 @@
     font-size: 25px;
     line-height: 36px;
     cursor: pointer;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .main-div {
+        margin-top: 5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .main-div {
+        margin-top: 5rem;
+    }
+
+}
+
+@media (max-width: 558px) {
+
+    .main-div {
+        display: block;
+        width: 100%;
+        margin-top: 5rem;
+        height: 800px;
+        background-image: url("../../public/images/signup.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .main-div .signup-heading h1 {
+        padding: 4rem;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .signup-box {
+        width: auto;
+        height: 530px;
+        padding: 30px;
+        background-color: #ECF0F1;
+        box-shadow: 8.84393px 8.84393px 44.2197px rgba(0, 0, 0, 0.25);
+        border-radius: 26.5318px;
+        margin: 0rem 5rem;
+        font-size: 5rem;
+
+    }
+
+    .signup-box {
+        display: block;
+    }
+
+    .main-div .signup-box button {
+        background-color: white;
+        width: 100%;
+        height: 50px;
+        border-radius: 40px;
+        text-align: center;
+        align-items: center;
+        margin-top: 0rem;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .main-div .signup-box p {
+        width: auto;
+        padding: 0rem;
+        margin-top: 1rem;
+        color: black;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    .main-div .signup-box .inputBox input {
+        width: 100%;
+        height: 46px;
+        font-size: 15px;
+        line-height: 20px;
+        padding-left: 3rem;
+        margin: 0px;
+    }
+
+    .signup-box input[type="submit"] {
+        width: 100%;
+        height: 44px;
+        background-color: #F1C40F;
+        border-radius: 30px;
+        border: none;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 20px;
+        cursor: pointer;
+        margin-top: 0rem;
+        margin-bottom: 2rem;
+    }
+    
 }

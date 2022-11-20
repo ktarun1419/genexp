@@ -6,6 +6,8 @@
     width: 100%;
     background-image: url("../../public/images/login.jpg");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -14,7 +16,7 @@
 }
 
 .main-login-div .login-heading h1 {
-    margin-left: 784px;
+    
     padding: 4rem;
     font-weight: 500;
     font-size: 50px;
@@ -22,13 +24,15 @@
 }
 
 .login-box {
-    margin-left: 784px;
+    
     width: 526px;
     height: 639px;
     padding: 50px;
     background-color: #ECF0F1;
     box-shadow: 8.84393px 8.84393px 44.2197px rgba(0, 0, 0, 0.25);
     border-radius: 26.5318px;
+    
+    
 }
 
 .login-box {
@@ -100,5 +104,165 @@
     font-size: 25px;
     line-height: 36px;
     z-index: 1;
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .login-box {
+        margin: 20px;  
+             
+    }
+
+    .main-login-div .login-heading h1 {
+        margin: 100px;
+        margin-bottom: 10px;
+        padding: 4rem;
+        font-weight: 500;
+        font-size: 50px;
+        line-height: 72px;
+    }
+}
+
+
+@media (max-width: 768px) {
+   
+
+    .login-box {
+        margin-left: 20px;  
+             
+    }
+
+    .main-login-div .login-heading h1 {
+        margin: 100px;
+        margin-bottom: 10px;
+        padding: 4rem;
+        font-weight: 500;
+        font-size: 50px;
+        line-height: 72px;
+    }
     
 }
+
+
+@media (max-width: 558px) {
+    .main-login-div {
+        display: block;        
+        height: 800px;
+        width: 100%;        
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: -9;
+    
+    }
+
+    .main-login-div .login-heading h1 {
+        margin: 100px;
+        margin-bottom: 10px;
+        text-align: center;
+        padding: 3rem;
+        padding-bottom: 1rem;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 72px;
+        
+    }
+
+    .login-box {
+        margin: 0rem 5rem;
+        width: auto;
+        height: 400px;
+        padding: 30px;
+        background-color: #ECF0F1;
+        box-shadow: 8.84393px 8.84393px 44.2197px rgba(0, 0, 0, 0.25);
+        border-radius: 26.5318px;
+    }
+
+    .login-box {
+        display: block;
+        
+    }
+
+    .main-login-div .login-box button {
+        background-color: white;
+        width: 100%;
+        height: 50px;
+        border-radius: 40px;
+        text-align: center;
+        align-items: center;
+        margin-top: 0rem;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .main-login-div .login-box p {
+        width: auto;
+        padding: 0rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        color: black;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    .main-login-div .login-box .inputBox input {
+        width: 100%;
+        height: 46px;
+        font-size: 15px;
+        line-height: 20px;
+        padding-left: 3rem;
+        margin: 4px 0px;
+    }
+
+    .main-login-div .login-box a {
+        padding: 2rem;
+        margin-top: 0.5rem;
+        margin-left: 0px;
+        
+        color: black;
+        font-size: 1.5rem;
+    
+    }
+
+    .login-box input[type="submit"] {
+        width: 100%;
+        height: 44px;
+        background-color: #F1C40F;
+        border-radius: 30px;
+        border: none;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 20px;
+        cursor: pointer;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .main-login-div .login-box p:last-child {
+        width: auto;
+        padding: 0rem;
+        margin-top: 0rem;
+        margin-bottom: 2rem;
+        color: black;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+    .button-l-group button {
+        
+        padding: 2rem 2rem;
+        background-color: var(--button-background);
+        color: black;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 20px;
+        z-index: 1;
+        position: absolute;
+        top: 10px;
+        left: 0px;
+        width: 110px;
+    
+    }
+
+} 

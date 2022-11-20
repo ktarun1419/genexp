@@ -1,38 +1,110 @@
-.heading1{
+.heading1 {
+    margin-top: 5rem;
     text-align: center;
     font-size: 3rem;
 }
-.row{
+
+.row {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:20px;
+    margin: 20px;
 
 }
 
-.box{
+.box {
     display: flex;
     align-items: center;
     background-color: #ECF0F1;
-    margin:20px;
+    margin: 20px;
     height: 300px;
     width: 574px;
     border-radius: 30px;
     flex-direction: column;
-    box-shadow: 10px 10px 50px rgb(0,0,0,0.25);
+    box-shadow: 10px 10px 50px rgb(0, 0, 0, 0.25);
 }
 
-.box p{
+.box p {
     font-size: 20px;
-    color:black;
+    color: black;
     margin-right: 45px;
     margin-left: 45px;
-    
+
 }
 
-.box h2{
+.box h2 {
     font-size: 30px;
-    margin-top:30px;
+    margin-top: 30px;
     margin-bottom: 20px;
     text-transform: uppercase;
+    text-align: center;
+}
+
+
+@media (min-width: 1024px) {
+    .box h2 {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .box h2 {
+        font-size: 20px;
+    }
+
+    .box p {
+        font-size: 20px;
+        height: auto;
+    }
+
+    .box {
+        height: 400px;
+    }
+
+    .heading1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .box h2 {
+        font-size: 20px;
+    }
+
+    .box p {
+        font-size: 20px;
+        height: auto;
+    }
+
+    .box {
+        height: 320px;
+        width: auto;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .heading1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 468px) {
+
+    .box h2 {
+        margin-bottom: 8px;
+    }
+
+    .box p {
+        font-size: 17px;
+        height: auto;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    .heading1 {
+        margin-top: 5rem;
+        
+    }
 }

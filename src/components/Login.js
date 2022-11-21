@@ -10,8 +10,8 @@ export default function Login(props) {
     useEffect(() => { document.title = "GenExp | Login"; }, []);
     return (
         <>
-            <div class="button-l-group">
-                <Link to="/" ><button> BACK TO HOME</button></Link>
+            <div class="button-l-group">                
+                <Link to="/" ><button> BACK TO HOME</button></Link>                
             </div>
             <div className="main-login-div">
 

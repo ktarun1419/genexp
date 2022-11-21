@@ -18,6 +18,7 @@
 .main-login-div .login-heading h1 {
     
     padding: 4rem;
+    margin-top: 5rem;
     font-weight: 500;
     font-size: 50px;
     line-height: 72px;
@@ -94,7 +95,17 @@
     margin-top: 3rem;
 }
 
-.button-l-group button {
+
+.button-l-group {
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  
+
+}
+
+.button-l-group button{
     margin: 3.5rem 14rem;
     padding: 0.5rem 2.5rem;
     background-color: var(--button-background);
@@ -104,7 +115,6 @@
     font-size: 25px;
     line-height: 36px;
     z-index: 1;
-
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -140,6 +150,15 @@
         font-size: 50px;
         line-height: 72px;
     }
+
+    .button-l-group {
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+    
+    }
     
 }
 
@@ -169,10 +188,10 @@
     }
 
     .login-box {
-        margin: 0rem 5rem;
+        margin: 0rem 1rem;
         width: auto;
-        height: 400px;
-        padding: 30px;
+        height: 440px;
+        padding: 30px 20px;
         background-color: #ECF0F1;
         box-shadow: 8.84393px 8.84393px 44.2197px rgba(0, 0, 0, 0.25);
         border-radius: 26.5318px;
@@ -190,7 +209,7 @@
         border-radius: 40px;
         text-align: center;
         align-items: center;
-        margin-top: 0rem;
+        margin-top: 2rem;
         font-size: 14px;
         padding: 10px;
     }
@@ -248,9 +267,18 @@
         text-align: center;
         font-size: 1.4rem;
     }
+
+    .button-l-group {
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+    
+    }
     .button-l-group button {
         
-        padding: 2rem 2rem;
+        padding: 1rem 2rem;
         background-color: var(--button-background);
         color: black;
         font-style: normal;
@@ -258,10 +286,11 @@
         font-size: 15px;
         line-height: 20px;
         z-index: 1;
-        position: absolute;
+        /* position: fixed;
         top: 10px;
         left: 0px;
-        width: 110px;
+        width: 110px; */
+
     
     }
 

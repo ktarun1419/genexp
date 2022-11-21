@@ -113,11 +113,11 @@
     .signup-box {
         width: auto;
         height: 530px;
-        padding: 30px;
+        padding: 30px 20px;
         background-color: #ECF0F1;
         box-shadow: 8.84393px 8.84393px 44.2197px rgba(0, 0, 0, 0.25);
         border-radius: 26.5318px;
-        margin: 0rem 5rem;
+        margin: 0rem 1rem;
         font-size: 5rem;
 
     }

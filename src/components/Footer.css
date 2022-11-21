@@ -77,16 +77,18 @@
     }
 
     .Element1{
-        margin: 50px;       
+        margin-bottom: 30px;       
         margin-left : 0px;
         margin-right: 0px;
-        width: 40vw;
+        width: 100%;
+        padding-left: 5rem;
     }
 
     .Element{
         margin: 10px;
         margin-top: 10px;
-        width: 29vw;       
+        width: 100%;
+        padding-left: 5rem;       
     }
 
     .Element1 p {

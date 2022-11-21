@@ -19,12 +19,7 @@ export default function Home(props) {
                     <div class="button-h-group">
                         <Link to="/signup" ><button>Get Started</button></Link>
                     </div>
-                </div>
-
-
-                <div class="hero-right-side">
-                    <img src="images/office.jpg" alt="office" />
-                </div>
+                </div>                
             </section>
             <section className='Feature'>
                 <h2 className='feature_heading'><u>FEATURES</u></h2>
@@ -56,7 +51,7 @@ export default function Home(props) {
                         </div>
                         <div className='White_box'>
                             <h3>Trust our Security</h3>
-                            <p>The data you upload is safe and secure with us thanks to the blockchain technology, so you can sleep soundly knowing your data is safe.</p>
+                            <p>The data you upload is safe and secure with us. Thanks to the blockchain technology, so you can sleep soundly knowing your data is safe and secure.</p>
                         </div>
                     </div>
                 </div>

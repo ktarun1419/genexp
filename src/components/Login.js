@@ -32,7 +32,7 @@ export default function Login(props) {
                         </div>
                     </form>
                     <a href="/">Forgot password?</a>
-                    <input type="submit" value="LOGIN" />
+                    <Link to="/dashboard"><input type="submit" value="LOGIN" /></Link>
                     <p className='lastpara'>Create an Account</p>
                 </div>
             </div>

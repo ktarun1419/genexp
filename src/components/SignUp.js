@@ -4,6 +4,7 @@ import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import './SignUp.css';
+import { Link } from "react-router-dom";
 import { useEffect } from 'react';
 
 export default function SignUp(props) {
@@ -31,7 +32,7 @@ export default function SignUp(props) {
                 </div>
             </form>
             <p>By signing up, I agree to your <b> Terms of Service </b>and <b>Privacy Policy</b>.</p>
-            <input type="submit" value="SIGN UP"/>
+            <Link to="/dashboard"><input type="submit" value="SIGN UP"/></Link>
         </div>
     </div>
     </>

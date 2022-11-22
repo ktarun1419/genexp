@@ -5,6 +5,46 @@ import "./Offers.css"
 export default function Offers() {
     let profilename = "Your Name",
         profileimage = "/images/profile.png";
+        let c1="Engineering"
+        let p1="Senior Devops Engineer"
+        let d1="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    
+    
+        let careers_list=[{
+            index:1,
+            category:c1,
+            position:p1,
+            description:d1,
+            location:"Banglore",
+            package:"1-2lakh"
+        },{
+            index:2,
+            category:c1,
+            position:"Junior Devs Engineer",
+            description:d1,
+            location:"Banglore",
+            package:"1-2lakh"
+        },{
+            index:3,
+            category:c1,
+            position:"Data Scientist",
+            description:d1,
+            location:"Banglore",
+            package:"1-2lakh"
+        },{
+            index:4,
+            category:c1,
+            position:p1,
+            description:d1,
+            location:"Banglore",
+            package:"1-2lakh"
+
+        },{            index:5,
+            category:c1,
+            position:p1,
+            description:d1,
+            location:"Banglore",
+            package:"1-2lakh"}]
   return (
     <><div className='dashboard'>
     <div className='dash-nav'>
@@ -53,7 +93,25 @@ export default function Offers() {
             <Link to='/'><button>Logout</button></Link>
         </div>
 
-        
+        <div className='career_container'>
+      <h1>
+        Opportunities
+      </h1>
+      {careers_list.map((box)=>{
+            return (    <div key={box.index} className='career_box'>
+              <h2>{box.category}</h2>
+              <h3>{box.position}</h3>
+              <p>{box.description}</p>
+              <div className='apply_box'>
+                  <div className='location_box'>
+                      <p>Location: {box.location}</p>
+                      <p>Package: {box.package}</p>
+                  </div>
+                    <button className='apply_button'>Apply Now</button>
+              </div>      
+          </div>)
+        })}
+    </div>
 
 
     </div>

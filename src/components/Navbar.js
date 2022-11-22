@@ -28,9 +28,9 @@ export default function Navbar() {
                                 <li>SECURITY</li>
                             </NavLink>
 
-                            <NavLink to="/">
+                            {/* <NavLink to="/dashboard">
                                 <li>CAREERS</li>
-                            </NavLink>
+                            </NavLink> */}
                         </div>
                     </div>
 

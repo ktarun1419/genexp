@@ -8,7 +8,7 @@ import Login from './components/Login';
 import AboutUs from './components/AboutUs';
 import DashHome from './components/DashHome';
 import Offers from './components/Offers';
-import { useState } from 'react';
+import { useState} from 'react';
 
 import {
   BrowserRouter as Router,
@@ -18,8 +18,7 @@ import {
 } from "react-router-dom";
 
 function App() {
-  const [showNav, setShowNav] = useState(true);  
-
+  const [showNav, setShowNav] = useState(true);
   return (
     <>
       <Router>
@@ -27,7 +26,7 @@ function App() {
           <nav>
             <Navbar />
           </nav>
-        }
+        }     
 
         <Routes>
           <Route exact path="/" element={<Home funcNav={setShowNav}/>} />
@@ -38,7 +37,7 @@ function App() {
           <Route exact path="/dashboard" element={<DashHome funcNav={setShowNav}/>} />
           <Route exact path="/offers" element={<Offers funcNav={setShowNav}/>} />
         </Routes>
-
+        
         {showNav &&
           <footer>
             <Footer />

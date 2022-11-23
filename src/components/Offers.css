@@ -171,3 +171,47 @@ align-items: center;
 .apply_button:active{
     background-color:  #F1C40F;
 }
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px){
+   .dash-nav{
+    width: 50px;
+   }
+
+   .dash-nav-menus #home {
+    display: none;
+   }
+
+   .dash-nav-menus #offer {
+    display: none;
+   }
+
+   .dash-nav-options .dash-nav-menus li span {
+    padding-right: 0rem;
+}
+
+.dash-nav-options .dash-profile-pic{
+    display: none;
+}
+
+.dash-nav-options .dash-nav-user{
+    display: none;
+}
+
+.dash-nav-header h2{
+    display: none;
+
+}
+
+.dash-nav-footer p{
+    display: none;
+}
+}

@@ -2,7 +2,9 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import "./Offers.css"
 
-export default function Offers() {
+export default function Offers(props) {
+
+    props.funcNav(false);
     let profilename = "Your Name",
         profileimage = "/images/profile.png";
         let c1="Engineering"
@@ -64,12 +66,12 @@ export default function Offers() {
             <div className='dash-nav-menus'>
                 <ul>
                     <li>
-                        <span><ion-icon name="home-outline"></ion-icon></span>
-                        <Link to="/dashboard"> Home</Link>
+                    <Link to="/dashboard"><span><ion-icon name="home-outline"></ion-icon></span></Link>
+                        <Link to="/dashboard" id='home'> Home</Link>
                     </li>
                     <li>
-                        <span><ion-icon name="laptop-outline"></ion-icon> </span>
-                        <Link to="/offers">Offers</Link>
+                    <Link to="/dashboard"><span><ion-icon name="laptop-outline"></ion-icon> </span></Link>
+                        <Link to="/offers" id='offer'>Offers</Link>
                     </li>
 
                 </ul>

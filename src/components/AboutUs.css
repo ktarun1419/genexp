@@ -6,28 +6,31 @@
 
 .about_main{
     background-image: url("../../public/images/aboutBG.jpg");
+    min-height:800px;
     background-size: cover;
-    height: 800px;
-
-    padding: 0 14rem;
+        background-position: center;
+        background-repeat: no-repeat;
+    
 }
 
 .about_heading{
-
+text-align: center;
     font-size: 30px;
     padding: 75px;
-    padding-left: 350px;
+    /* padding-left: 350px; */
     padding-bottom: 5px;
 }
 
 .text_container{
-    height: 500px;
+    height: auto;
     display: flex;
+    flex-wrap: wrap;
 }
 .about_text1{
     margin: 30px;
     margin-left: 100px;
-    width: 1000px;
+    max-width: 700px;
+
     text-align: center;
     justify-content:space-between;
 }
@@ -44,9 +47,11 @@
 }
 
 .about_text2{
+    max-width: 500px;
     text-align: center;
     width: 600px;
     align-self: flex-end;
+
 }
 
 .about_text2 p{
@@ -56,9 +61,9 @@
 
 
 .Company_name{
-
+text-align: center;
     font-size: 35px;
-    padding-left: 150px;
+    /* padding-left: 150px; */
 }
 
 .Company_name h2{
@@ -78,6 +83,7 @@
 .team_container{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin: 100px;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -100,4 +106,192 @@
     font-size: 25px;
 }
 
+@media(min-width:1299px){
 
+}
+
+@media(min-width:769)and (max-width:998px){
+    .abouttop{
+        height: auto;
+        padding-top:60px;
+        text-align: center;
+    }
+    .about_main{
+        padding: 25px;
+        background-image: none;
+        background-color: rgb(241, 196, 15, 0.12);   }
+    .about_heading{
+        padding: 0px;
+
+    }
+
+    .text_container{
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .Company_name{
+        padding: 2px;
+
+        text-align: center;
+    }
+
+    .team_container{
+        margin: 0px;
+        padding: 2px;
+        }
+
+
+    .about_text1{
+        margin: 5px;
+        text-align: left;
+    }
+
+    .aboutbottom{
+        margin:0px;
+        margin-top: 100px;
+        margin-bottom: 20px;
+        height: auto;
+    }
+
+ 
+    .about_text1_grey{
+        color:black;
+    }
+    .about_text2{
+        margin: 20px;
+        min-width: 50px;
+        text-align: left;
+    }
+    .about_text2 p{
+        color: black;
+    }
+
+    .team_container{
+        flex-wrap: wrap;
+    }
+}
+
+@media(min-width:468px)and (max-width:768px){
+    .abouttop{
+        height: auto;
+        padding-top:60px;
+        text-align: center;
+    }
+    .about_main{
+        padding: 50px;
+        background-image: none;
+        background-color: rgb(241, 196, 15, 0.12);   }
+    .about_heading{
+        padding: 0px;
+
+    }
+
+    .text_container{
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .Company_name{
+        padding: 2px;
+
+        text-align: center;
+    }
+
+    .team_container{
+        margin: 0px;
+        padding: 2px;
+        }
+
+
+    .about_text1{
+        margin: 5px;
+        text-align: left;
+    }
+
+    .aboutbottom{
+        margin:0px;
+        margin-bottom: 20px;
+        height: auto;
+    }
+
+    .about_text1_grey{
+        color:black;
+    }
+    .about_text2{
+        margin: 20px;
+        text-align: left;
+    }
+    .about_text2 p{
+        color: black;
+    }
+
+    .team_container{
+        flex-wrap: wrap;
+    }
+
+}
+
+@media(max-width:468px){
+    .abouttop{
+        height: auto;
+        padding-top:60px;
+        text-align: center;
+    }
+    .about_main{
+        padding: 8px;
+        background-image: none;
+        background-color: rgb(241, 196, 15, 0.12);   }
+
+    
+    .about_heading{
+        padding: 0px;
+        font-size: 25px;
+    }
+
+    .text_container{
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .Company_name{
+        padding: 2px;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .team_container{
+        margin: 0px;
+        padding: 2px;
+        }
+
+
+    .about_text1{
+        margin: 5px;
+        text-align: left;
+    }
+
+    .aboutbottom{
+        margin:0px;
+        margin-bottom: 20px;
+        height: auto;
+    }
+
+    .about_text1_black{
+        font-size: 20px;
+    }
+    .about_text1_grey{
+        font-size: 20px;
+    }
+    .about_text2{
+        margin: 20px;
+        text-align: left;
+        font-size: 20px;
+    }
+    .team_container{
+        flex-wrap: wrap;
+    }
+    .team_heading{
+        font-size: 25px;
+    }
+}

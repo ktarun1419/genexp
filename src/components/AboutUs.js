@@ -18,13 +18,10 @@ function AboutUs() {
      <p className='about_text1_grey'> We designed our website in easy to use way with concern of personal data protection using
        blockchain technology . for more information see features page </p>
       </div>
-      <div className='about_text2'>
-        <p>Our Website provides a platform in which students can register
-           and we will post companies available for them and they can apply 
-           for those companies on basis of their interests and skills</p>
-      </div>
+
        </div>
       </div> 
+   
     
   </section>
   <section className='aboutbottom'>

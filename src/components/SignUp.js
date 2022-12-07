@@ -4,12 +4,17 @@ import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import './SignUp.css';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect } from 'react';
 
 export default function SignUp(props) {
     props.funcNav(true);
     useEffect(() => { document.title = "GenExp | Sign Up"; }, []);
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
   return (
     <>
     <div className="main-div">

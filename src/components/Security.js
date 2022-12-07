@@ -1,10 +1,16 @@
 import React from 'react'
 import "./Security.css"
 import { useEffect } from 'react';
+import { useLocation } from "react-router-dom";
 
 export default function Security(props) {
     props.funcNav(true);
     useEffect(() => { document.title = "GenExp | Security"; }, []);
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
   return (
     <>
     <h1 className='heading1'>SECURITY AT GENEXP</h1>

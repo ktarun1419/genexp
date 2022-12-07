@@ -1,12 +1,19 @@
 import React from 'react'
 import './Home.css';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect } from 'react';
+
 
 
 export default function Home(props) {
     props.funcNav(true);
     useEffect(() => { document.title = "GenExp | Making Recruitment Experience Better"; }, []);
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
     return (
         <>
 
@@ -19,7 +26,7 @@ export default function Home(props) {
                     <div class="button-h-group">
                         <Link to="/signup" ><button>Get Started</button></Link>
                     </div>
-                </div>                
+                </div>
             </section>
             <section className='Feature'>
                 <h2 className='feature_heading'><u>FEATURES</u></h2>
@@ -59,12 +66,12 @@ export default function Home(props) {
             </section>
             <section className='about-home'>
                 <div className='about-image-container'>
-                    <img className = 'about-image' src="images/aboutUs.jpg" alt="" />
+                    <img className='about-image' src="images/aboutUs.jpg" alt="" />
                 </div>
                 <div className='about-content-container'>
                     <h1><u>ABOUT GENEXP</u></h1>
                     <p>
-                    We aim to provide common platform for all your internship/placement related work , expanding our database as we progress.<br/><br/>We designed our website in easy to use way with concern of personal data protection using blockchain technology. 
+                        We aim to provide common platform for all your internship/placement related work , expanding our database as we progress.<br /><br />We designed our website in easy to use way with concern of personal data protection using blockchain technology.
                     </p>
                     <Link to={"/aboutus"}><button>KNOW MORE</button></Link>
                 </div>

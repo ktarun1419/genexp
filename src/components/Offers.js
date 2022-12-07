@@ -1,10 +1,16 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Offers.css"
+import { useEffect } from 'react';
 
 export default function Offers(props) {
 
     props.funcNav(false);
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
     let profilename = "Your Name",
         profileimage = "/images/profile.png";
         let c1="Engineering"

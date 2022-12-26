@@ -22,8 +22,8 @@ function Footer() {
       <div className='Element'>
           <h3>Resources</h3>
           <Link to='/security'>Security<br/></Link>
-          <a href='\'>CDGC<br/></a>
-          <a href='\'>PEC<br/></a>
+          <a href='https://pec.ac.in/tnp/about-cell'>CDGC<br/></a>
+          <a href='https://pec.ac.in/'>PEC<br/></a>
           <Link to='/aboutus'>About Us<br/></Link>
       </div>
       

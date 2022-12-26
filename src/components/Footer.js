@@ -22,8 +22,8 @@ function Footer() {
       <div className='Element'>
           <h3>Resources</h3>
           <Link to='/security'>Security<br/></Link>
-          <a href='https://pec.ac.in/tnp/about-cell' target=”_blank”>CDGC<br/></a>
-          <a href='https://pec.ac.in/ ' target=”_blank”>PEC<br/></a>
+          <a href='https://pec.ac.in/tnp/about-cell' target="_blank" rel="noopener noreferrer">CDGC<br/></a>
+          <a href='https://pec.ac.in/' target="_blank" rel="noopener noreferrer">PEC<br/></a>
           <Link to='/aboutus'>About Us<br/></Link>
       </div>
       

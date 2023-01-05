@@ -79,6 +79,10 @@ export default function Offers(props) {
                     <Link to="/dashboard"><span><ion-icon name="laptop-outline"></ion-icon> </span></Link>
                         <Link to="/offers" id='offer'>Offers</Link>
                     </li>
+                    <li>
+                    <Link to="/dashboard"><span><ion-icon name="laptop-outline"></ion-icon> </span></Link>
+                        <Link to="/Settings" id='Settings'>Settings</Link>
+                    </li>
 
                 </ul>
             </div>

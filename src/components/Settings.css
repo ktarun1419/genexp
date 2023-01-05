@@ -4,59 +4,60 @@
     justify-content: center;
     height : 100vh;
     width: 100%;
-    background-image: url("../../public/images/signup.jpg");
+    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-.formarea{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #ECF0F1;
-    width: 550px;
-    padding: 10px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    border-radius: 2em;
-    box-shadow: 8.84393px 8.84393px 44.2197px rgba(0, 0, 0, 0.25);
+
+.right-section {
+    padding:10vh;
+    height:100%;
+    width: 100%;
+    
+}
+
+.formBox{
+    width: 100%;
+    height:auto;
 }
 
 .formarea p{
     color: black;
     font-size: 30px;
     font-weight: 500px;
+    
 }
 
-.formarea form{
+.right-section form{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-items: center;
     width: 100%;
+    align-items: center;
 }
 .formBox input{
-    width:400px;
-    height : 40px;
+    width:100%;
+    height : 50px;
     padding: 0px 10px;
     border-radius: 15px;
     display: flex;
     margin: 10px 10px;
     font-size: 2rem;
-    outline: none;
+    outline: none; 
     border: none;
 }
 .formText{
-    width: 400px;
+    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.formarea .formText textarea{
+.formText textarea{
     margin-top: 10px;
     padding: 0px 10px;
-    width:400px;
+    width:100%;
     height: 200px;
     box-sizing: border-box;
     resize: none;
@@ -65,18 +66,9 @@
     border: none;
     outline: none;
 }
-.formBox label{
-    padding: 20px;
-    font-size: 25px;
-}
 
-.formarea a input{
-    background-color: #F1C40F;
-    height: 50px;
-    width: 180px;
-    border-radius: 2rem;
+.formBox h3{
+    padding: 20px;
+    padding-top: 4%;
     font-size: 25px;
-    font-weight: 600;
-    outline: none;
-    border:none;
 }

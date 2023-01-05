@@ -35,7 +35,7 @@ export default function DashHome(props) {
                                 </li>
                                 
                                 <li>
-                                <Link to="/dashboard"><span><ion-icon name="home-outline"></ion-icon></span></Link>
+                                <Link to="/dashboard"><span><ion-icon name="settings-outline"></ion-icon></span></Link>
                                     <Link to="/settings" id='settings'>Settings</Link>
                                 </li>
 

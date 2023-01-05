@@ -33,6 +33,11 @@ export default function DashHome(props) {
                                 <Link to="/offers"><span><ion-icon name="laptop-outline"></ion-icon> </span></Link>
                                     <Link to="/offers" id='offer'>Offers</Link>
                                 </li>
+                                
+                                <li>
+                                <Link to="/dashboard"><span><ion-icon name="home-outline"></ion-icon></span></Link>
+                                    <Link to="/settings" id='settings'>Settings</Link>
+                                </li>
 
                             </ul>
                         </div>

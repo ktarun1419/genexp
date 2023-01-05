@@ -8,6 +8,7 @@ import Login from './components/Login';
 import AboutUs from './components/AboutUs';
 import DashHome from './components/DashHome';
 import Offers from './components/Offers';
+import Settings from './components/Settings';
 import { useState} from 'react';
 
 import {
@@ -36,6 +37,7 @@ function App() {
           <Route exact path="/aboutus" element={<AboutUs funcNav={setShowNav}/>} />
           <Route exact path="/dashboard" element={<DashHome funcNav={setShowNav}/>} />
           <Route exact path="/offers" element={<Offers funcNav={setShowNav}/>} />
+          <Route exact path="/settings" element={<Settings funcNav={setShowNav}/>} />
         </Routes>
         
         {showNav &&
@@ -44,7 +46,9 @@ function App() {
           </footer> }
 
       </Router>
-      </>
+    {/* <Form/> */}
+    </>
+    
     
   );
 }

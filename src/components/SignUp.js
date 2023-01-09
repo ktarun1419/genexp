@@ -4,9 +4,10 @@ import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import './SignUp.css';
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
 import { useState } from 'react';
+import {useSignupMutation} from '../services/authApi';
 
 export default function SignUp(props) {
     props.funcNav(true);
@@ -20,18 +21,31 @@ export default function SignUp(props) {
     const [fullname,setFullName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [cpassword, setcPassword] = useState("");
+    const [password2, setcPassword] = useState("");
+    const [signup, {isLoading, isSuccess}] = useSignupMutation();
+    const navigate = useNavigate();
 
-    const [allEntry, setAllEntry] = useState("");
-
-    console.log(allEntry);
-
-    const submitForm = (e) =>{
+    
+    const submitForm = async (e) =>{
         e.preventDefault();
-        const newEntry = {fullname:fullname, email:email, password:password, cpassword:cpassword}
+        console.log(fullname)
+        console.log(email)
+        console.log(password)
+        console.log(password2)
+        
+        
+        const newEntry = {
+            username:fullname, 
+            email:email, 
+            password:password, 
+            password2:password2
+        }
 
-        setAllEntry([...allEntry,newEntry]);
+        const res = await signup(newEntry)
+        navigate('/dashboard')
     }
+
+    
   return (
     <>
     <div className="main-div">
@@ -39,12 +53,12 @@ export default function SignUp(props) {
         <h1>SIGN UP</h1>
         </div>
         <div className="signup-box">
-            <button><FontAwesomeIcon icon={faGoogle} /> Sign Up with Google</button>
-            <p className='small-para'> or Sign Up with email</p>
+            
             
             <form name='signUpForm' method='' action="" onSubmit={submitForm}>
                 <div className="inputBox">                    
-                    <input type="text" name='fullname' id = 'sname' value = {fullname} onChange = {(e) => setFullName(e.target.value)} autoComplete='off' required placeholder='Enter Your Full Name'/>
+                    <input type="text" name='fullname' id = 'sname' value = {fullname} onChange = {(e) => setFullName(e.target.value)} autoComplete='off' required placeholder='Enter Your Username'/ >
+
                 </div>
                 <div className="inputBox">                    
                     <input type="email" name='email' id = 'semail' value = {email} onChange = {(e) => setEmail(e.target.value)} autoComplete='off' required placeholder='Email'/>
@@ -53,11 +67,13 @@ export default function SignUp(props) {
                     <input type="password" name='password' id = 'spassword' value = {password} onChange = {(e) => setPassword(e.target.value)} autoComplete='off' required placeholder='Password'/>
                 </div>
                 <div className="inputBox">                    
-                    <input type="text" name='cpassword' id = 'scpassword' value = {cpassword} onChange = {(e) => setcPassword(e.target.value)} autoComplete='off' required placeholder='Confirm Password'/>
+                    <input type="password" name='cpassword' id = 'scpassword' value = {password2} onChange = {(e) => setcPassword(e.target.value)} autoComplete='off' required placeholder='Confirm Password'/>
                 </div>
+                <button  type="submit">SIGN UP</button>
             </form>
+            
             <p>By signing up, I agree to your <b> Terms of Service </b>and <b>Privacy Policy</b>.</p>
-            <Link to="/dashboard"><input type="submit" value="SIGN UP"/></Link>
+            
         </div>
         {/* <div>
     {

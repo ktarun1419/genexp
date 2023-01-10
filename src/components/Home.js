@@ -23,7 +23,7 @@ export default function Home(props) {
                     <p>
                         Making Recruitment Experience Better
                     </p>
-                    <div class="button-h-group">
+                    <div className="button-h-group">
                         <Link to="/signup" ><button>Get Started</button></Link>
                     </div>
                 </div>

@@ -11,11 +11,11 @@ export default function NavBarCheck() {
     <div className="Navbar">
       <span className="nav-logo">GENEXP</span>
       <div className={`nav-items ${isOpen && "open"}`}>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/aboutus">About Us</NavLink>
-        <NavLink to="/security">Security</NavLink>
+        <NavLink to="/" style={({ isActive }) => { return { color: isActive ? '#F1C40F' : '' } }}>Home</NavLink>
+        <NavLink to="/aboutus" style={({ isActive }) => { return { color: isActive ? '#F1C40F' : '' } }}>About Us</NavLink>
+        <NavLink to="/security" style={({ isActive }) => { return { color: isActive ? '#F1C40F' : '' } }}>Security</NavLink>
         <Link to="/login">Login</Link>
-        <Link to="/signup">Sign Up</Link>
+        <NavLink to="/signup" style={({ isActive }) => { return { color: isActive ? '#F1C40F' : '' } }}>Sign Up</NavLink>
       </div>
       <div
         className={`nav-toggle ${isOpen && "open"}`}

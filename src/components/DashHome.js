@@ -1,9 +1,14 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import "./DashHome.css"
+import { useEffect } from 'react';
 
 export default function DashHome(props) {
-    props.funcNav(false);
+    
+    useEffect(()=>{
+        props.funcNav(false);    
+    })
+    
     let profilename = "Your Name",
         profileimage = "/images/profile.png";
   return (
@@ -57,7 +62,7 @@ export default function DashHome(props) {
                 <div className='dash-right'>
                     <div className='dash-right-header'>
                         <h1>DASHBOARD</h1>
-                        <Link to='/'><button>Logout</button></Link>
+                        <Link to='/login'><button>Logout</button></Link>
                     </div>
 
                     <div className='dash-section-top'>

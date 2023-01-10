@@ -20,7 +20,7 @@
 
 .signup-box {
     width: 526px;
-    height: 600px;
+    height: 650px;
     padding: 50px;
     background-color: #ECF0F1;
     box-shadow: 8.84393px 8.84393px 44.2197px rgba(0, 0, 0, 0.25);
@@ -31,6 +31,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.signup-box h3{
+    margin-bottom: 5%;
 }
 
 .main-div .signup-box button {
@@ -76,6 +79,11 @@
     line-height: 36px;
     cursor: pointer;
 }
+
+.signup-box button[type="submit"]:hover{
+    background: #1b3d68;    
+    color:white;
+} 
 
 @media (min-width: 768px) and (max-width: 1023px) {
     .main-div {

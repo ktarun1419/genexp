@@ -1,7 +1,7 @@
-from django.shortcuts import render
 from rest_framework.views import APIView
 from django.contrib.auth.models import User
 from rest_framework.response import Response
+from rest_framework.authtoken.models import Token
 
 
 
@@ -15,13 +15,15 @@ class SignupView(APIView):
 
         if(password==password2):
             if User.objects.filter(email=email).exists():
-                return Response({'error':'Email taken'})
+                return Response({'emailExist':'Email taken'})
             elif User.objects.filter(username=username).exists():
-                return Response({'error':'Username taken'})
+                return Response({'usernameExist':'Username taken'})
             else:
                 user=User.objects.create_user(username=username,email=email,password=password)
-                user.save()
-                return Response({'token':'abc123'})
+                user.save() 
+                token, _ = Token.objects.get_or_create(user=user)
+                print(token)
+                return Response({'token': token.key})
         else:
             return Response({'error':'Passwords not matching'})
         

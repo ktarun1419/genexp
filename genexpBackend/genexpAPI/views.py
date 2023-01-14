@@ -2,7 +2,7 @@ from rest_framework.views import APIView
 from django.contrib.auth.models import User
 from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
-
+from django.contrib.auth import authenticate
 
 
 # Create your views here.
@@ -27,3 +27,15 @@ class SignupView(APIView):
         else:
             return Response({'error':'Passwords not matching'})
         
+class LoginView(APIView):
+    def post(self, request):
+        username = request.data.get('username')
+        password = request.data.get('password')
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            token=Token.objects.get(user=user)
+            user_out=Token.objects.get(key=str(token))
+            return Response({'token':str(token)},status=200)
+        else:
+            return Response({'error': 'Invalid username or password'}, status=401)

@@ -27,7 +27,7 @@
 .login-box {
     
     width: 526px;
-    height: 639px;
+    height: 500px;
     padding: 50px;
     background-color: #ECF0F1;
     box-shadow: 8.84393px 8.84393px 44.2197px rgba(0, 0, 0, 0.25);
@@ -53,12 +53,7 @@
 
 }
 
-.main-login-div .login-box p {
-    padding: 2rem;
-    margin-top: 1rem;
-    color: black;
 
-}
 
 .main-login-div .login-box a {
     padding: 2rem;

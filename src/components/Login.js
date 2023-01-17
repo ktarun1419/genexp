@@ -1,9 +1,7 @@
 import React from 'react'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import './Login.css';
 import { Link, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect,useState } from 'react';
 
 export default function Login(props) {
     props.funcNav(false);
@@ -13,6 +11,10 @@ export default function Login(props) {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [pathname]);
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    console.log(email,password)
     return (
         <>
             <div class="button-l-group">                
@@ -24,21 +26,20 @@ export default function Login(props) {
                     <h1>LOGIN</h1>
                 </div>
                 <div className="login-box">
-                    <button><FontAwesomeIcon icon={faGoogle} /> Log in with Google</button>
-                    <p className='small-para'> or Login with email</p>
+                    <h3>Welcome To GENEXP!</h3>
 
-                    <form method='' action="">
+                    <form name='loginForm' method='' action="" >
 
                         <div className="inputBox">
-                            <input type="email" name='fullname' autoComplete='off' required placeholder='Email' />
+                            <input type="email" name='fullname' id = 'lemail' value={email} onChange = {(e) => setEmail(e.target.value)} autoComplete='off' required placeholder='Email' />
                         </div>
                         <div className="inputBox">
-                            <input type="password" name='password' autoComplete='off' required placeholder='Password' />
+                            <input type="password" name='password' id = 'lpassword' value={password} onChange = {(e) => setPassword(e.target.value)} autoComplete='off' required placeholder='Password' />
                         </div>
                     </form>
                     <a href="/">Forgot password?</a>
                     <Link to="/dashboard"><input type="submit" value="LOGIN" /></Link>
-                    <p className='lastpara'>Create an Account</p>
+                    <Link to = "/signup"><p className='lastpara'>Create an Account</p></Link>
                 </div>
             </div>
         </>

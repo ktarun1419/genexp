@@ -5,7 +5,7 @@ import "./DashHome.css"
 import { useDispatch } from 'react-redux';
 import { unSetToken } from '../features/tokenSlice';
 // import { Link, useLocation } from "react-router-dom";
-// import { useEffect } from 'react';
+import { useState } from 'react';
 
 
 export default function Settings(props) {
@@ -21,6 +21,14 @@ export default function Settings(props) {
         profileimage = "/images/profile.png";
   // useEffect(() => { document.title = "GenExp | Sign Up"; }, []);
   //   const { pathname } = useLocation();
+
+    const [settingsUsername,setsettingsUsername] = useState("")
+    const [settingsFullname,setsettingsFullname] = useState("")
+    const [cgpa,setcgpa] = useState("")
+    const [settingsEmail,setsettingsEmail] = useState("")
+    const [settingsBio,setsettingsBio] = useState("")
+
+
   return (
     <><div className='dashboard'>
     <div className='dash-nav'>
@@ -75,26 +83,29 @@ export default function Settings(props) {
     <div className='screen'>
     <div className = "right-section">
       
-      <form method = '' action = '' >
+    <form method = '' action = '' >
                 <div className="formBox">                    
-                    <input type="text" name='username' autoComplete='off' required placeholder='Username'/>
+                    <input type="text" name='username' value = {settingsUsername} disabled autoComplete='off' required placeholder='Username'/>
                 </div>
                 <div className="formBox">                    
-                    <input type="text" name='fullname' autoComplete='off' required placeholder='Full Name'/>
+                    <input type="email" name='email' value = {settingsEmail} disabled autoComplete='off' required placeholder='Email'/>
                 </div>
                 <div className="formBox">                    
-                    <input type="email" name='email' autoComplete='off' required placeholder='Email'/>
+                    <input type="text" name='fullname' value = {settingsFullname} onChange = {(e) => setsettingsFullname(e.target.value)}  autoComplete='off' required placeholder='Full Name'/>
                 </div>
                 <div className="formBox">                    
-                    <input type="password" name='password' autoComplete='off' required placeholder='Password'/>
+                    <input type="text" name='cgpa' value = {cgpa} autoComplete='off'  onChange = {(e) => setcgpa(e.target.value)} required placeholder='CGPA'/>
+                </div>
+                <div className="formBox">                    
+                    <input type="text" name='cgpa' value = {cgpa} autoComplete='off'  onChange = {(e) => setcgpa(e.target.value)} required placeholder='CGPA'/>
+                </div>
+                <div className="formBox">                    
+                    <input type="text" name='cgpa' value = {cgpa} autoComplete='off'  onChange = {(e) => setcgpa(e.target.value)} required placeholder='CGPA'/>
                 </div>
                 <div className="formText">
-                  <textarea placeholder='Description' name="Description" id="description" cols="30" rows="10"></textarea>
+                  <textarea placeholder='Bio' value = {settingsBio}  onChange = {(e) => setsettingsBio(e.target.value)} name="Bio" id="bio" cols="30" rows="10"></textarea>
                 </div>
-                {/* <div className="formBox">
-                  <h3>Upload Your CV </h3>
-                  <input type="file" name="file"  />
-                </div> */}
+                
                 
       </form>
             

@@ -48,7 +48,21 @@ class LoginView(APIView):
             return Response({'error': 'Invalid username or password'}, status=401)
 
 class ProfileView(APIView):
+    
     def get(self,request,tk):
         profile=Profile.objects.get(token=tk)
+        serializer=ProfileSerializer(profile)
+        return Response(serializer.data)
+   
+    def post(self,request,tk):
+        profile=Profile.objects.get(token=tk)
+        fullname=request.data.get('fullname')
+        cgp=float(request.data.get('cgp'))
+        bio=request.data.get('bio')
+        profile=Profile.objects.get(token=tk)
+        profile.fullname=fullname
+        profile.cgp=cgp
+        profile.bio=bio
+        profile.save(update_fields=['fullname','cgp','bio'])
         serializer=ProfileSerializer(profile)
         return Response(serializer.data)

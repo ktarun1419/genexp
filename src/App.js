@@ -40,8 +40,9 @@ function App() {
           <Route exact path="/login" element={!token ?<Login funcNav={setShowNav}/> : <Navigate to='/dashboard'/>} />
           <Route exact path="/aboutus" element={<AboutUs funcNav={setShowNav}/>} />
           <Route exact path="/dashboard" element={token ? <DashHome funcNav={setShowNav}/> : <Navigate to='/login'/>}/>  
-          <Route exact path="/offers" element={token ?<Offers funcNav={setShowNav}/>: <Navigate to='/login'/>} />
-          <Route exact path="/settings" element={token ?<Settings funcNav={setShowNav}/>: <Navigate to='/login'/>} />        
+          <Route exact path="/offers" element={token ?<Offers funcNav={setShowNav}/>: <Navigate to='/login'/>} />          
+          <Route exact path="/settings" element={<Settings funcNav={setShowNav}/>} />        
+
         </Routes>
         
         {showNav &&

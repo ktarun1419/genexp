@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { unSetToken } from '../features/tokenSlice';
 // import { Link, useLocation } from "react-router-dom";
 import { useState } from 'react';
-import { useGetProfileQuery } from '../services/authApi';
+import { useGetProfileQuery, useUpdateProfileMutation } from '../services/authApi';
 
 
 export default function Settings(props) {
@@ -30,9 +30,12 @@ export default function Settings(props) {
     const [cgpa,setcgpa] = useState("")
     const [settingsEmail,setsettingsEmail] = useState("")
     const [settingsBio,setsettingsBio] = useState("")
+    const [status, setStatus] = useState("")
 
     let token = localStorage.getItem('token') 
-    const {data, isSuccess} = useGetProfileQuery(token)    
+    const {data, isSuccess} = useGetProfileQuery(token) 
+    
+    const [updateProfile] = useUpdateProfileMutation()
 
 
     useEffect(() => {
@@ -42,6 +45,27 @@ export default function Settings(props) {
             setsettingsBio(data.bio)
         }
       }, [data, isSuccess])
+
+    const updateProfileHandler = async (e) => {
+        e.preventDefault();       
+        const newEntry = {
+            user: {
+                fullname: settingsFullname,
+                cgp: cgpa,
+                bio: settingsBio                
+            } ,
+            token: token           
+        }
+
+        const response = await updateProfile(newEntry)
+        if (response.data){
+            setStatus("Data updated! Kindly Reload the page to see effect")
+        }
+        
+        
+    }
+
+    
 
   return (
     <><div className='dashboard'>
@@ -96,8 +120,9 @@ export default function Settings(props) {
         </div>
     <div className='screen'>
     <div className = "right-section">
-      
-    <form method = '' action = '' >
+
+   
+    <form  method = '' action = '' onSubmit={updateProfileHandler}>
                 <div className="formBox">                    
                     <input type="text" name='username' value = {settingsUsername} disabled autoComplete='off' required placeholder='Username'/>
                 </div>
@@ -114,7 +139,9 @@ export default function Settings(props) {
                 <div className="formText">
                   <textarea placeholder='Bio' value = {settingsBio}  onChange = {(e) => setsettingsBio(e.target.value)} name="Bio" id="bio" cols="30" rows="10"></textarea>
                 </div>
-                
+                {status ? <div style={{color:'green', fontSize: 20, marginTop:'5%', marginLeft:'5%', marginRight:"5%", textAlign:'center'}}><span ><ion-icon name="checkmark-done-circle-outline"></ion-icon></span> {status}</div> : ""}
+      
+                <button className='settings-button' style={{marginTop: "3rem"}}  type="submit">UPDATE</button>
                 
       </form>
             

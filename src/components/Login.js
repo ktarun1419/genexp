@@ -47,7 +47,6 @@ export default function Login(props) {
     useEffect(() => {
         
         dispatch(setToken(token))
-        console.log("hi")
         
     }, [token, dispatch])
           

@@ -10,16 +10,20 @@ import DashHome from './components/DashHome';
 import Offers from './components/Offers';
 import Settings from './components/Settings';
 import { useState} from 'react';
+import { useSelector } from 'react-redux';
 
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  // Link
+  Navigate,  
 } from "react-router-dom";
 
 function App() {
+  
   const [showNav, setShowNav] = useState(true);
+  const token = useSelector(state => state.token.token)
+  
   return (
     <>
       <Router>
@@ -33,18 +37,17 @@ function App() {
           <Route exact path="/" element={<Home funcNav={setShowNav}/>} />
           <Route exact path="/security" element={<Security funcNav={setShowNav}/>} />
           <Route exact path="/signup" element={<SignUp funcNav={setShowNav}/>} />
-          <Route exact path="/login" element={<Login funcNav={setShowNav}/>} />
+          <Route exact path="/login" element={!token ?<Login funcNav={setShowNav}/> : <Navigate to='/dashboard'/>} />
           <Route exact path="/aboutus" element={<AboutUs funcNav={setShowNav}/>} />
-          <Route exact path="/dashboard" element={<DashHome funcNav={setShowNav}/>} />
-          <Route exact path="/offers" element={<Offers funcNav={setShowNav}/>} />
-          <Route exact path="/settings" element={<Settings funcNav={setShowNav}/>} />
+          <Route exact path="/dashboard" element={token ? <DashHome funcNav={setShowNav}/> : <Navigate to='/login'/>}/>  
+          <Route exact path="/offers" element={token ?<Offers funcNav={setShowNav}/>: <Navigate to='/login'/>} />
+          <Route exact path="/settings" element={token ?<Settings funcNav={setShowNav}/>: <Navigate to='/login'/>} />        
         </Routes>
         
         {showNav &&
           <footer>
             <Footer />
           </footer> }
-
       </Router>
     {/* <Form/> */}
     </>

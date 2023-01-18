@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate
+from .models import Profile
+from .serializer import *
+
 
 
 # Create your views here.
@@ -20,12 +23,14 @@ class SignupView(APIView):
                 return Response({'usernameExist':'Username taken'})
             else:
                 user=User.objects.create_user(username=username,email=email,password=password)
-                user.save() 
+                user.save()
                 token, _ = Token.objects.get_or_create(user=user)
-                print(token)
+                profile=Profile.objects.create(user=user,token=str(token))
+                profile.save()
                 return Response({'token': token.key})
         else:
             return Response({'error':'Passwords not matching'})
+
         
 class LoginView(APIView):
     def post(self, request):
@@ -41,3 +46,9 @@ class LoginView(APIView):
             return Response({'token':token.key},status=200)
         else:
             return Response({'error': 'Invalid username or password'}, status=401)
+
+class ProfileView(APIView):
+    def get(self,request,tk):
+        profile=Profile.objects.get(token=tk)
+        serializer=ProfileSerializer(profile)
+        return Response(serializer.data)

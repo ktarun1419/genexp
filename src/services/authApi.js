@@ -38,8 +38,20 @@ export const authApi = createApi({
           }
         }
       }),
+      updateProfile: builder.mutation({
+        query:({user, token})=>{
+          return{
+            url:`profile/${token}`,
+            method: 'POST',
+            body: user,
+            headers: {
+              'Content-type': 'application/json',
+            }
+          }
+        }
+      }),
     }),
       
   })
 
-  export const { useSignupMutation, useLoginMutation, useGetProfileQuery } = authApi
+  export const { useSignupMutation, useLoginMutation, useGetProfileQuery, useUpdateProfileMutation } = authApi

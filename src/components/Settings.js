@@ -27,6 +27,7 @@ export default function Settings(props) {
 
     const [settingsUsername,setsettingsUsername] = useState("")
     const [settingsFullname,setsettingsFullname] = useState("")
+    const [fullname,setFullname] = useState("")
     const [cgpa,setcgpa] = useState("")
     const [settingsEmail,setsettingsEmail] = useState("")
     const [settingsBio,setsettingsBio] = useState("")
@@ -43,6 +44,12 @@ export default function Settings(props) {
             setsettingsFullname(data.fullname)
             setcgpa(data.cgp)
             setsettingsBio(data.bio)
+        }
+      }, [data, isSuccess])
+    useEffect(() => {
+        if (data && isSuccess) {
+            setFullname(data.fullname)
+            
         }
       }, [data, isSuccess])
 
@@ -79,7 +86,7 @@ export default function Settings(props) {
             </div>
 
             <div className='dash-nav-user'>
-                <h2>{profilename}</h2>
+                <h2>{fullname}</h2>
                 <p>Student</p>
             </div>
 

@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useNavigate } from "react-router-dom";
 import "./DashHome.css"
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { unSetToken } from '../features/tokenSlice';
+import { useGetProfileQuery } from '../services/authApi';
 
 export default function DashHome(props) {
     const dashLogout = () => {
@@ -18,6 +19,15 @@ export default function DashHome(props) {
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
+    const [settingsFullname,setsettingsFullname] = useState("")
+    const token = useSelector(state => state.token.token)
+    const {data, isSuccess} = useGetProfileQuery(token) 
+
+    useEffect(() => {
+        if (data && isSuccess) {
+            setsettingsFullname(data.fullname)            
+        }
+      }, [data, isSuccess])
 
    
 
@@ -36,7 +46,7 @@ export default function DashHome(props) {
                         </div>
 
                         <div className='dash-nav-user'>
-                            <h2>{profilename}</h2>
+                            <h2>{settingsFullname}</h2>
                             <p>Student</p>
                         </div>
 

@@ -10,9 +10,10 @@
 }
 
 .right-section {
+    height: 90vh;
     padding:10vh;
     width: 100%;
-    overflow-x: scroll;
+    overflow: scroll;
 }
 
 .formBox{
@@ -71,4 +72,14 @@
     padding: 20px;
     padding-top: 4%;
     font-size: 25px;
+}
+
+.settings-button{
+    background-color:#F1C40F;
+    color: black;
+}
+
+.settings-button:hover {
+    background-color: #1b3d68;
+    color: white;
 }

@@ -1,12 +1,21 @@
 import React from 'react';
 import './Settings.css'; 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./DashHome.css"
+import { useDispatch } from 'react-redux';
+import { unSetToken } from '../features/tokenSlice';
 // import { Link, useLocation } from "react-router-dom";
 // import { useEffect } from 'react';
 
 
 export default function Settings(props) {
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const dashLogout = () => {
+        dispatch(unSetToken(null))
+        localStorage.removeItem('token')
+        navigate('/login')
+    }
   props.funcNav(false);
     let profilename = "Your Name",
         profileimage = "/images/profile.png";
@@ -35,11 +44,11 @@ export default function Settings(props) {
                         <Link to="/dashboard" id='home'> Home</Link>
                     </li>
                     <li>
-                    <Link to="/dashboard"><span><ion-icon name="laptop-outline"></ion-icon> </span></Link>
+                    <Link to="/offers"><span><ion-icon name="laptop-outline"></ion-icon> </span></Link>
                         <Link to="/offers" id='offer'>Offers</Link>
                     </li>
                     <li>
-                    <Link to="/dashboard"><span><ion-icon name="settings-outline"></ion-icon></span></Link>
+                    <Link to="/settings"><span><ion-icon name="settings-outline"></ion-icon></span></Link>
                         <Link to="/settings" id='settings'> Settings</Link>
                     </li>
 
@@ -61,7 +70,7 @@ export default function Settings(props) {
     <div className='dash-right'>
         <div className='dash-right-header'>
             <h1>SETTINGS</h1>
-            <Link to='/'><button>Logout</button></Link>
+            <Link to='/'><button onClick={dashLogout}>Logout</button></Link>
         </div>
     <div className='screen'>
     <div className = "right-section">
@@ -82,10 +91,10 @@ export default function Settings(props) {
                 <div className="formText">
                   <textarea placeholder='Description' name="Description" id="description" cols="30" rows="10"></textarea>
                 </div>
-                <div className="formBox">
+                {/* <div className="formBox">
                   <h3>Upload Your CV </h3>
                   <input type="file" name="file"  />
-                </div>
+                </div> */}
                 
       </form>
             

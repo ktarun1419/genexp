@@ -1,9 +1,19 @@
 import React from 'react'
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Offers.css"
 import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { unSetToken } from '../features/tokenSlice';
 
 export default function Offers(props) {
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+
+    const dashLogout = () => {
+        dispatch(unSetToken(null))
+        localStorage.removeItem('token')
+        navigate('/login')
+    }
 
     props.funcNav(false);
     const { pathname } = useLocation();
@@ -76,12 +86,12 @@ export default function Offers(props) {
                         <Link to="/dashboard" id='home'> Home</Link>
                     </li>
                     <li>
-                    <Link to="/dashboard"><span><ion-icon name="laptop-outline"></ion-icon> </span></Link>
+                    <Link to="/offers"><span><ion-icon name="laptop-outline"></ion-icon> </span></Link>
                         <Link to="/offers" id='offer'>Offers</Link>
                     </li>
                     <li>
-                    <Link to="/dashboard"><span><ion-icon name="settings-outline"></ion-icon> </span></Link>
-                        <Link to="/Settings" id='Settings'>Settings</Link>
+                    <Link to="/settings"><span><ion-icon name="settings-outline"></ion-icon> </span></Link>
+                        <Link to="/settings" id='Settings'>Settings</Link>
                     </li>
 
                 </ul>
@@ -102,7 +112,7 @@ export default function Offers(props) {
     <div className='dash-right'>
         <div className='dash-right-header'>
             <h1>OFFERS</h1>
-            <Link to='/'><button>Logout</button></Link>
+            <Link to='/'><button onClick={dashLogout}>Logout</button></Link>
         </div>
 
         <div className='career_container'>

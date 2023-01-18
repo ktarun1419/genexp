@@ -34,8 +34,10 @@ class LoginView(APIView):
         user = authenticate(request, username=username, password=password)
 
         if user is not None:
-            token=Token.objects.get(user=user)
-            user_out=Token.objects.get(key=str(token))
-            return Response({'token':str(token)},status=200)
+            # token=Token.objects.get(user=user)
+            # user_out=Token.objects.get(key=str(token))
+            token, _ = Token.objects.get_or_create(user=user)
+            # return Response({'token':str(token)},status=200)
+            return Response({'token':token.key},status=200)
         else:
             return Response({'error': 'Invalid username or password'}, status=401)

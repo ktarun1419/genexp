@@ -2,9 +2,8 @@
     display: flex;
     align-items:center;
     justify-content: center;
-    height : 100vh;
+    height : 90vh;
     width: 100%;
-    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,10 +11,8 @@
 
 .right-section {
     padding:10vh;
-    
     width: 100%;
-    
-    
+    overflow-x: scroll;
 }
 
 .formBox{
@@ -47,6 +44,7 @@
     font-size: 2rem;
     outline: none; 
     border: none;
+    box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.25);
 }
 .formText{
     width: 100%;
@@ -66,6 +64,7 @@
     border-radius: 15px;
     border: none;
     outline: none;
+    box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
 .formBox h3{

@@ -6,6 +6,8 @@ User=get_user_model()
 
 class Profile(models.Model):
     user= models.ForeignKey(User,on_delete=models.CASCADE)
+    username=models.CharField(max_length=40,default="")
+    email=models.CharField(max_length=80,default="")
     token=models.CharField(max_length=100,default="")
     fullname=models.CharField(max_length=100,default="Your Name")
     cgp=models.FloatField(default=0.0)

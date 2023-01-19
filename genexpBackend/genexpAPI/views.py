@@ -25,7 +25,7 @@ class SignupView(APIView):
                 user=User.objects.create_user(username=username,email=email,password=password)
                 user.save()
                 token, _ = Token.objects.get_or_create(user=user)
-                profile=Profile.objects.create(user=user,token=str(token))
+                profile=Profile.objects.create(user=user,token=str(token),username=username,email=email)
                 profile.save()
                 return Response({'token': token.key})
         else:

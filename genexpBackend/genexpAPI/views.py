@@ -68,6 +68,9 @@ class ProfileView(APIView):
         serializer=ProfileSerializer(profile)
         return Response(serializer.data)
 
-class JobListView(ListAPIView):
-    queryset=Job.objects.all()
-    serializer_class=JobSerializer
+class JobListView(APIView):
+    def get(self,request):
+        queryset=Job.objects.all()
+        # serializer_class=JobSerializer
+        serializer=JobSerializer(queryset, many=True)
+        return Response(serializer.data)

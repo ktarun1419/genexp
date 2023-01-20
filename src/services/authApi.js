@@ -50,8 +50,16 @@ export const authApi = createApi({
           }
         }
       }),
+      getJob: builder.query({
+        query:()=>{
+          return{
+            url:'jobs/',
+            method: 'GET',            
+          }
+        }
+      }),
     }),
       
   })
 
-  export const { useSignupMutation, useLoginMutation, useGetProfileQuery, useUpdateProfileMutation } = authApi
+  export const { useSignupMutation, useLoginMutation, useGetProfileQuery, useUpdateProfileMutation, useGetJobQuery } = authApi

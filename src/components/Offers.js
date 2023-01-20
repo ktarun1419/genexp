@@ -4,22 +4,31 @@ import "./Offers.css"
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { unSetToken } from '../features/tokenSlice';
-import { useGetProfileQuery } from '../services/authApi';
+import { useGetJobQuery, useGetProfileQuery } from '../services/authApi';
 
 export default function Offers(props) {
     const navigate = useNavigate()
     const dispatch = useDispatch()
+    const [jobOffers, setJobOffers] = useState([])
+    
     
     const [settingsFullname,setsettingsFullname] = useState("")
     const token = useSelector(state => state.token.token)
     const {data, isSuccess} = useGetProfileQuery(token) 
+    const job = useGetJobQuery() 
+    
+    useEffect(()=>{
+        let carrer_list = job.data
+        setJobOffers(carrer_list)
+        
+    }, [job.data])
 
     const dashLogout = () => {
         dispatch(unSetToken(null))
         localStorage.removeItem('token')
         navigate('/login')
     }
-
+    
     useEffect(() => {
         if (data && isSuccess) {
             setsettingsFullname(data.fullname)            
@@ -31,49 +40,11 @@ export default function Offers(props) {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [pathname]);
+    }, [pathname]);     
+    
     let profilename = "Your Name",
         profileimage = "/images/profile.png";
-        let c1="Engineering"
-        let p1="Senior Devops Engineer"
-        let d1="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-    
-    
-        let careers_list=[{
-            index:1,
-            category:c1,
-            position:p1,
-            description:d1,
-            location:"Banglore",
-            package:"1-2lakh"
-        },{
-            index:2,
-            category:c1,
-            position:"Junior Devs Engineer",
-            description:d1,
-            location:"Banglore",
-            package:"1-2lakh"
-        },{
-            index:3,
-            category:c1,
-            position:"Data Scientist",
-            description:d1,
-            location:"Banglore",
-            package:"1-2lakh"
-        },{
-            index:4,
-            category:c1,
-            position:p1,
-            description:d1,
-            location:"Banglore",
-            package:"1-2lakh"
-
-        },{            index:5,
-            category:c1,
-            position:p1,
-            description:d1,
-            location:"Banglore",
-            package:"1-2lakh"}]
+        
   return (
     <><div className='dashboard'>
     <div className='dash-nav'>
@@ -130,17 +101,18 @@ export default function Offers(props) {
       <h1>
         Opportunities
       </h1>
-      {careers_list.map((box)=>{
-            return (    <div key={box.index} className='career_box'>
+      {jobOffers.map((box)=>{
+            return (    <div key={box.id} className='career_box'>
               <h2>{box.category}</h2>
               <h3>{box.position}</h3>
               <p>{box.description}</p>
               <div className='apply_box'>
                   <div className='location_box'>
                       <p>Location: {box.location}</p>
+                      <p>Eligibility: {box.criteria}</p>
                       <p>Package: {box.package}</p>
                   </div>
-                    <button className='apply_button'>Apply Now</button>
+                    <button className="apply_button" >Apply Now</button>
               </div>      
           </div>)
         })}

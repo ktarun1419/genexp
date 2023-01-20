@@ -168,12 +168,10 @@ align-items: center;
     background: #1b3d68;
 }
 
+
 .apply_button:active{
     background-color:  #F1C40F;
 }
-
-
-
 
 
 
@@ -215,3 +213,4 @@ align-items: center;
     display: none;
 }
 }
+

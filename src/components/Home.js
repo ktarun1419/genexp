@@ -6,6 +6,9 @@ import { useEffect } from 'react';
 
 
 export default function Home(props) {
+
+   
+
     props.funcNav(true);
     useEffect(() => { document.title = "GenExp | Making Recruitment Experience Better"; }, []);
     const { pathname } = useLocation();

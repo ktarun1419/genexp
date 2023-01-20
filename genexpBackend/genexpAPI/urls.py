@@ -6,4 +6,5 @@ urlpatterns = [
     path('login/',LoginView.as_view(),name='login'),
     path('profile/',ProfileView.as_view(),name='profile'),
     path('profile/<str:tk>',ProfileView.as_view(),name='profile'),
+    path('jobs/',JobListView.as_view(),name='Jobs'),
 ]

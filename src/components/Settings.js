@@ -41,6 +41,8 @@ export default function Settings(props) {
 
     useEffect(() => {
         if (data && isSuccess) {
+            setsettingsUsername(data.username)
+            setsettingsEmail(data.email)
             setsettingsFullname(data.fullname)
             setcgpa(data.cgp)
             setsettingsBio(data.bio)

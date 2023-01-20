@@ -132,21 +132,26 @@ export default function Settings(props) {
 
    
     <form  method = '' action = '' onSubmit={updateProfileHandler}>
-                <div className="formBox">                    
-                    <input type="text" name='username' value = {settingsUsername} disabled autoComplete='off' required placeholder='Username'/>
+                <div className="formBox">  
+                    <label for="username">Username</label>             
+                    <input type="text" name='username' id='username' value = {settingsUsername} disabled autoComplete='off' required placeholder='Username'/>
                 </div>
-                <div className="formBox">                    
-                    <input type="email" name='email' value = {settingsEmail} disabled autoComplete='off' required placeholder='Email'/>
+                <div className="formBox">  
+                    <label for="email">Email</label>                       
+                    <input type="email" name='email' id='email' value = {settingsEmail} disabled autoComplete='off' required placeholder='Email'/>
                 </div>
-                <div className="formBox">                    
-                    <input type="text" name='fullname' value = {settingsFullname} onChange = {(e) => setsettingsFullname(e.target.value)}  autoComplete='off' required placeholder='Full Name'/>
+                <div className="formBox">   
+                    <label for="fullname">Full Name</label>                      
+                    <input type="text" name='fullname' id='fullname' value = {settingsFullname} onChange = {(e) => setsettingsFullname(e.target.value)}  autoComplete='off' required placeholder='Full Name'/>
                 </div>
-                <div className="formBox">                    
-                    <input type="number" name='cgpa' value = {cgpa} autoComplete='off'  onChange = {(e) => setcgpa(e.target.value)} required placeholder='CGPA'/>
+                <div className="formBox">    
+                    <label for="cgpa">CGPA</label>                     
+                    <input type="number" name='cgpa' id='cgpa' value = {cgpa} autoComplete='off'  onChange = {(e) => setcgpa(e.target.value)} required placeholder='CGPA'/>
                 </div>
-               
+                <h3><label for="bio">BIO</label> </h3>
                 <div className="formText">
-                  <textarea placeholder='Bio' value = {settingsBio}  onChange = {(e) => setsettingsBio(e.target.value)} name="Bio" id="bio" cols="30" rows="10"></textarea>
+                    
+                  <textarea placeholder='Bio'  value = {settingsBio}  onChange = {(e) => setsettingsBio(e.target.value)} name="Bio" id="bio" cols="30" rows="10"></textarea>
                 </div>
                 {status ? <div style={{color:'green', fontSize: 20, marginTop:'5%', marginLeft:'5%', marginRight:"5%", textAlign:'center'}}><span ><ion-icon name="checkmark-done-circle-outline"></ion-icon></span> {status}</div> : ""}
       

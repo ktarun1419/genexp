@@ -83,3 +83,9 @@
     background-color: #1b3d68;
     color: white;
 }
+
+.formBox label{
+    font-size: 2rem;
+    font-weight: 600;
+    display: block;
+}

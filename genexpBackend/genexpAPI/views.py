@@ -5,6 +5,7 @@ from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate
 from .models import Profile
 from .serializer import *
+from rest_framework.generics import ListAPIView
 
 
 
@@ -66,3 +67,7 @@ class ProfileView(APIView):
         profile.save(update_fields=['fullname','cgp','bio'])
         serializer=ProfileSerializer(profile)
         return Response(serializer.data)
+
+class JobListView(ListAPIView):
+    queryset=Job.objects.all()
+    serializer_class=JobSerializer

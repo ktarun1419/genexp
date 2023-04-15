@@ -56,7 +56,7 @@ export default function Settings(props) {
       }, [data, isSuccess])
 
     const updateProfileHandler = async (e) => {
-        e.preventDefault();       
+        // e.preventDefault();       
         const newEntry = {
             user: {
                 fullname: settingsFullname,

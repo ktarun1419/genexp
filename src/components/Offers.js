@@ -101,7 +101,7 @@ export default function Offers(props) {
       <h1>
         Opportunities
       </h1>
-      {jobOffers.map((box)=>{
+      {jobOffers && jobOffers.map((box)=>{
             return (    <div key={box.id} className='career_box'>
               <h2>{box.category}</h2>
               <h3>{box.position}</h3>

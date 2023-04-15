@@ -21,7 +21,9 @@ This web project will help the university conduct recruitment process smoothly a
 ## Watch it!
 Demo video showing the working of the website. Navigating through different sections:
 
-https://user-images.githubusercontent.com/114407607/232116160-b0ee08f2-52a3-433b-ada9-eff78595d8dd.mp4
+
+https://user-images.githubusercontent.com/114407607/232250325-bd0b0b13-76b6-4bfa-bbbe-eefc1a997a39.mp4
+
 
 ## Known issues 
 Work in progress! Working to optimize the website and adding more functionalities 😍
